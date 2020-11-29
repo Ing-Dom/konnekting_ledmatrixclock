@@ -106,6 +106,12 @@ void setup()
   Debug.setPrintStream(&DEBUGSERIAL);
   #endif
 
+  for(int i = 0;i<1024;i++)
+  {
+    writeMemory(i,0xFF);
+  }
+  commitMemory();
+
     Konnekting.setMemoryReadFunc(&readMemory);
   Konnekting.setMemoryWriteFunc(&writeMemory);
   Konnekting.setMemoryUpdateFunc(&updateMemory);
@@ -119,6 +125,7 @@ void setup()
                     REVISION);
 
    pinMode(PROG_BUTTON_PIN, INPUT_PULLUP);
+   pinMode(PROG_LED_PIN, OUTPUT);
   if(!digitalRead(PROG_BUTTON_PIN))
   {
     Debug.println(F("Jumper set to ProgMode. Starting programming mode..."));
@@ -172,7 +179,7 @@ void loop()
 
     // set the LED with the ledState of the variable:
     digitalWrite(ledPin, ledState);
-    Debug.print(F("DEBUG! free ram: %d bytes \n"), Debug.freeRam());
+    //Debug.print(F("DEBUG! free ram: %d bytes \n"), Debug.freeRam());
   }
 
 

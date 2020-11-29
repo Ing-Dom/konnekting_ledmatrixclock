@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "name": "debug COM8",
+            "BMPGDBSerialPort": "//./COM8",
+            "interface": "swd",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "bmp",
+            "executable": "../build/proto02.ino.elf",
+            "armToolchainPath": "C:\\Users\\dosp\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\bin"
+        }
+    ]
+}

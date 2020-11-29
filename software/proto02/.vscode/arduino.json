@@ -1,6 +1,7 @@
 {
     "board": "adafruit:samd:adafruit_itsybitsy_m0",
-    "configuration": "usbstack=arduino,debug=off",
+    "configuration": "usbstack=arduino,debug=on",
     "port": "COM5",
+    "output": "../build",
     "sketch": "proto02.ino"
 }
