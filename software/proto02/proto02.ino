@@ -31,7 +31,7 @@ V0.0.0
 //configuration
 #include "config.h"
 
-
+long interval = 200;           // interval at which to blink (milliseconds)
 
 
 // ################################################
@@ -73,7 +73,10 @@ void commitMemory()
 //you can use LED, LCD display or what ever you want...
 void progLed(bool state)
 {
-  //digitalWrite(PROG_LED_PIN, state);
+  if(state)
+    interval = 50;
+  else
+    interval = 200;  
 }
 
 
@@ -106,11 +109,13 @@ void setup()
   Debug.setPrintStream(&DEBUGSERIAL);
   #endif
 
+/*
   for(int i = 0;i<1024;i++)
   {
     writeMemory(i,0xFF);
   }
   commitMemory();
+  */
 
     Konnekting.setMemoryReadFunc(&readMemory);
   Konnekting.setMemoryWriteFunc(&writeMemory);
@@ -155,7 +160,7 @@ void setup()
 const int ledPin =  LED_BUILTIN;// the number of the LED pin
 int ledState = LOW;             // ledState used to set the LED
 unsigned long previousMillis = 0;        // will store last time LED was updated
-const long interval = 200;           // interval at which to blink (milliseconds)
+
 
 // ################################################
 // ### LOOP

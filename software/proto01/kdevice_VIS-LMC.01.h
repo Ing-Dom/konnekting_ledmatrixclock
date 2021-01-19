@@ -20,7 +20,7 @@ KnxComObject KnxDevice::_comObjectsList[] = {
     /* Index 2 - function */ KnxComObject(KNX_DPT_5_010, 0x38),
     /* Index 3 - color */ KnxComObject(KNX_DPT_232_600, 0x28),
     /* Index 4 - backcolor */ KnxComObject(KNX_DPT_232_600, 0x28),
-    /* Index 5 - scene */ KnxComObject(KNX_DPT_18_001, 0x38),
+    /* Index 5 - scene */ KnxComObject(KNX_DPT_17_001, 0x38),
     /* Index 6 - gen_daynight */ KnxComObject(KNX_DPT_1_001, 0x2a),
     /* Index 7 - gen_datetime */ KnxComObject(KNX_DPT_19_001, 0x2a),
     /* Index 8 - error_code */ KnxComObject(KNX_DPT_12_001, 0x34)
